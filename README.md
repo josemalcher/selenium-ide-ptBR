@@ -27,9 +27,9 @@ Um comando é o que dizer ao Selenium o que fazer. Comandos no Selenium vêm em 
 <br>
 <table>
 <tr>
-    <td>|| Command ||</td>
-    <td>target ||</td>
-    <td>value ||</td>
+    <td>Command</td>
+    <td>target</td>
+    <td>value</td>
     
 </tr>
 </table>
