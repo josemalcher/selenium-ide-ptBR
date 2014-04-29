@@ -5,7 +5,7 @@ Tradução da Documentação dos Comandos do Selenium  IDE - Componente do Firef
 
 Obs.: Documentação não oficial. Tradução feita no Google T. e leituras.
 
-Aceito colaboração!!
+Aceito colaboração: contato: malcher.malch@gmail.com
 
 Documento de Referência Selenium IDE 
 
