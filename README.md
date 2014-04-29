@@ -53,7 +53,7 @@ Comandos **"waitFor"** espera por alguma condição para se tornar verdade (o qu
 
 Os **Padrões** são utilizados por vários motivos, por exemplo, para especificar o valor esperado de um campo de entrada , ou identificar uma opção de escolha. Selenium suporta vários tipos de padrão, incluindo - as expressões regulares, os quais são descritos mais detalhadamente abaixo.
 
-Define um objeto que executa comandos Semenium.
+Define um objeto que executa comandos Selenium.
 
 Element Locators
 =================
