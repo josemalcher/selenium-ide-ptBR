@@ -1,7 +1,7 @@
 Selenium ide ptBR
 =================
 
-Tradução da Documentação dos Comandos do Selenium  IDE - Componente do Firefox para Teste de Softwarers.
+Tradução da Documentação e exemplos práticos dos Comandos do Selenium  IDE - Componente do Firefox para Teste de Softwarers.
 
 Obs.: Documentação não oficial. Tradução feita no Google T. e leituras.
 
@@ -58,3 +58,51 @@ Define um objeto que executa comandos Selenium.
 Element Locators
 =================
 
+Localizador Selênio dizer qual elemento HTML de um comando se refere. O formato de um localizador é:
+
+locatorType = argumento
+
+Apoiamos as seguintes estratégias para localizar elementos:
+- identificador = ID : Selecione o elemento com o atributo @id especificado. Se nenhuma correspondência for encontrada, selecione o primeiro elemento cujo atributo de nome @ é id. (Isto é normalmente o padrão, veja abaixo.)
+
+ - id = ID : Selecione o elemento com o atributo @ id especificado.
+- nome = nome : Selecione o primeiro elemento com o especificado @ atributo nome.
+ - nome de usuário
+ - name = nome de usuário
+
+O nome pode, opcionalmente, ser seguido por um ou mais elementos-filtros , separados a partir do nome de espaço em branco. Se o FilterType não for especificado, o valor é assumido.
+
+	nome = valor sabor de chocolate =
+
+- dom = javascriptExpression : Encontre um elemento avaliando a cadeia especificada. Isto permite-lhe percorrer o modelo de objeto de documento HTML usando JavaScript. Note que você não deve retornar um valor nessa cadeia; simplesmente tornar a última expressão no bloco.
+ - dom = document.forms ['myForm']. myDropdown
+ - dom = document.images [56]
+ - dom = document.links função foo () {return [1]; }; foo ();
+
+- XPath = XpathExpression : Localize um elemento usando uma expressão XPath.
+	- XPath = / / img [@ alt = 'O texto alt imagem']
+	- XPath = / / table [@ id = 'tabela1'] / / tr [4] / td [2]
+	- XPath = / / a [contains (@ href, '# id1')]
+	- XPath = / / a [contains (@ href, '# id1')] / @ class
+	- XPath = (/ / table [@ class = 'stylee']) / / th [text () = 'theHeaderText'] /.. / td
+	- XPath = / / input [@ name = 'nome2' e @ value = 'yes']
+	- XPath = / / * [text () = "right"]
+
+
+
+- ligação = textpattern : Selecione o link (âncora) elemento que contém o texto correspondente a determinado padrão .
+link = O texto do link
+
+- css = cssSelectorSyntax : Selecione o elemento usando seletores CSS. Por favor, consulte seletores CSS2 , seletores CSS3 para mais informações. Você também pode verificar o teste TestCssLocators no conjunto de testes de selênio para um exemplo de uso, que está incluído no pacote de núcleo selênio baixado.
+	- css = a [href = "# id3"]
+	- css = vão # firstChild + extensão
+
+Atualmente, o localizador seletor css suporta todos os seletores css1, CSS2 e CSS3, exceto namespace em CSS3, alguns pseudo classes: (nth-of-type,: nth-last-of-type,: first-of-type,: last-of- Tipo,: only-of-type,: visited,: hover,: active,: foco,: indeterminado) e pseudo elementos (:: primeira linha, :: first-letter, :: :: seleção, antes, :: depois).
+
+
+- ui = uiSpecifierString : Localize um elemento por resolver a corda especificador UI para outro localizador, e avaliá-las. Veja a referência Selenium UI-Element para mais detalhes.
+	- ui = loginPages :: loginButton ()
+	- ui = settingsPages :: alternância (label = Esconder e-mail)
+	- ui = forumPages :: postBody (index = 2) / / a [2]
+
+Sem um prefixo localizador explícito, Selenium usa as seguintes estratégias padrão:
